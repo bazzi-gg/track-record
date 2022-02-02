@@ -14,7 +14,7 @@ using TrackRecord.Services;
 using TrackRecord.Services.Impl;
 
 var configuration = new ConfigurationBuilder()
-        .AddEnvironmentVariables()
+        .AddEnvironmentVariables("APP_")
         .AddCommandLine(args)
         .AddJsonFile("appsettings.json",false,true)
         .AddJsonFile($"appsettings.{Environment.GetEnvironmentVariable("DOTNET_ENVIRONMENT")}.json",true,true)
