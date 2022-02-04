@@ -16,7 +16,7 @@ using TrackRecord.Services.Impl;
 var configuration = new ConfigurationBuilder()
         .AddEnvironmentVariables("APP_")
         .AddCommandLine(args)
-        .AddJsonFile("appsettings.json",false,true)
+        .AddJsonFile("appsettings.json",true,true)
         .AddJsonFile($"appsettings.{Environment.GetEnvironmentVariable("DOTNET_ENVIRONMENT")}.json",true,true)
         .Build();
 using (SentrySdk.Init(o =>
