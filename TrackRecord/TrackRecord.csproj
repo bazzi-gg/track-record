@@ -22,6 +22,9 @@
 	<ItemGroup>
 		<EditorConfigFiles Remove=".editorconfig" />
 		<None Include=".editorconfig" />
+		<None Update="appsettings.*.json">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</None>
 	</ItemGroup>
 
 </Project>
