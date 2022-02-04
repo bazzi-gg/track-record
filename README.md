@@ -21,6 +21,7 @@ git clone https://github.com/bazzi-gg/track-record.git
 ```
 
 ## Usage
+
 [Development](#development)를 참고하세요.
 
 ## Maintainers
@@ -33,9 +34,9 @@ git clone https://github.com/bazzi-gg/track-record.git
 
 ## Development
 
-1. `Server/appsettings.example.json`에서 공백인 **value**값을 채웁니다.
-2. 파일명을 `Server/appsettings.example.json`에서 `Server/appsettings.development.json`으로 변경합니다.
-3. Server.sln을 Rider(Jetbrains) 혹은 Visual Studio로 엽니다.
+1. `TrackRecord/appsettings.example.json`에서 공백인 **value**값을 채웁니다.
+2. 파일명을 `TrackRecord/appsettings.example.json`에서 `TrackRecord/appsettings.development.json`으로 변경합니다.
+3. TrackRecord.sln을 Rider(Jetbrains) 혹은 Visual Studio로 엽니다.
 
 ## License
 
