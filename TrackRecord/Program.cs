@@ -38,5 +38,6 @@ static IHostBuilder CreateHostBuilder(string[] args) =>
         })
         .ConfigureLogging((hostingContext, logging) =>
         {
+            logging.AddConfiguration(hostingContext.Configuration);
             logging.AddSentry();
         });
