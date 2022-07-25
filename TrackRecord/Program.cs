@@ -19,14 +19,8 @@ var configuration = new ConfigurationBuilder()
         .AddJsonFile("appsettings.json",true,true)
         .AddJsonFile($"appsettings.{Environment.GetEnvironmentVariable("DOTNET_ENVIRONMENT")}.json",true,true)
         .Build();
-using (SentrySdk.Init(o =>
- {
-     o.Dsn = configuration["Sentry:Dsn"];
-     o.TracesSampleRate = 1.0;
- }))
-{
-    CreateHostBuilder(args, configuration["Sentry:Dsn"]).Build().Run();
-}
+
+CreateHostBuilder(args, configuration["Sentry:Dsn"]).Build().Run();
 
 static IHostBuilder CreateHostBuilder(string[] args,string sentryDsn) =>
     Host.CreateDefaultBuilder(args)
