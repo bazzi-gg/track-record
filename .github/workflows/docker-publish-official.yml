@@ -6,10 +6,9 @@ name: Docker
 # documentation.
 
 on:
-  push:
-    tags:
-      - '0.*'
-
+  release:
+    types: [published]
+    
 env:
   # Use docker.io for Docker Hub if empty
   REGISTRY: ghcr.io
